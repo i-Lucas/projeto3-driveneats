@@ -65,6 +65,8 @@ footer {
     height: 61px;
     background: #CBCBCB;
     border-radius: 50px;
+    border: none;
+    color: white;
 }
 
 /*  */
