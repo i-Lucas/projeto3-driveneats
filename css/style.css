@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 body {
-    width: 414px;    
+    background-color: #E5E5E5;    
+}
+
+img {
+    width: 144px;
+    height: 87px;
 }
 
 header {
@@ -13,10 +19,27 @@ header {
 
     background: #CF2B2B;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    padding-top: 8px;
+    padding-left: 21px;
+}
+
+header h1 {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 44px;
+    color: white;
+}
+
+header p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
 }
 
 main {
-    margin-top: 95px;
+    margin-top: 115px;
 }
 
 footer {
@@ -27,14 +50,10 @@ footer {
     background-color: red;
 }
 
-.all {
-    height: calc(100%-184px);
-}
-
 .button-box {
     width: 100%;
     height: 92px;
-    background-color: salmon;
+    background-color: white;
 
     display:flex;
     align-items: center;
@@ -50,33 +69,63 @@ footer {
 
 /*  */
 
-.pratos-container {
-    background-color: blue;
-    /* display: flex; */
-    /* overflow-x: scroll; */
+.dishes-container, .drinks-container, .desserts-container {
     margin-left: 19px;
+    margin-top: 20px;
 }
 
-.pratos-container h1 {
+.dishes-container h1, .drinks-container h1, .desserts-container h1 {
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 26px;
 }
 
-.pratos-scroll {
+.desserts-container {
+    margin-bottom: 130px;
+}
+
+.scroll-box {
     margin-top: 17px;
     display: flex;
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    background-color: green;
     overflow-x: scroll;
 }
 
-.pratos-box {
+.options-box {
     width: 172px;
     height: 216px;
     margin-right: 20px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
+
+    padding: 18px 18px 0px 18px
+}
+
+/* textos */
+
+.options-box h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+
+    margin-top: 8px;
+}
+
+.options-box h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+
+    margin-top: 8px;
+}
+
+.options-box p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #A6A6A6;
+
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
