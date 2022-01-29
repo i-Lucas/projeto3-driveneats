@@ -19,7 +19,6 @@
     </header>
 
     <main>
-
         <section class="dishes-container" data-identifier="dishes">
             <h1>Primeiro, seu prato</h1>
             <div class="scroll-box">
@@ -104,14 +103,31 @@
             </div>
         </section>
 
+        <!-- check icon -->
+        <!-- <ion-icon name="checkmark-circle-outline"></ion-icon> -->
+
     </main>
+
+    <div class="background-white"></div>
+
+    <div class="order-confirm hidden" data-identifier="confirmation-dialog">
+        <h1>Confirme seu pedido</h1>
+        <p><span class="order-name-0">Pedido1</span> <span class="order-price-0">Preco1</span></p>
+        <p><span class="order-name-1">Pedido2</span> <span class="order-price-1">Preco2</span></p>
+        <p><span class="order-name-2">Pedido3</span> <span class="order-price-2">Preco3</span></p>
+        <p><span>TOTAL R$ </span><span class="order-total-price"> PrecoTotal</span></p>
+        <button onclick="confirmData()">Tudo certo, pode pedir!</button>
+        <button onclick="cancelOrder()">Cancelar</button>
+    </div>
 
     <footer>
         <div class="button-box">
-            <button id = "btn" onclick = "infoOrder()">Selecione os 3 itens <br>para fechar o pedido</button>
+            <button id="btn" onclick="infoOrder()">Selecione os 3 itens <br>para fechar o pedido</button>
         </div>
     </footer>
 
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="src/app.js"></script>
 </body>
 
