@@ -10,9 +10,7 @@ order is sent via whatsapp ✔
 
 attributes for autocorrect in html ✔
 
-
-
-out of date:
-
-https://codesandbox.io/s/priceless-cori-2fgl6?file=/index.html
+see the app online:
 https://2fgl6.csb.app/
+
+
