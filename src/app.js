@@ -13,7 +13,7 @@ function selected(item, section) {
 
         for (let i = 0; i <= 3; i++) {
             remove_border[i].style.boxShadow = 'none'
-            remove_border[i].classList.add('hiddenIcone')
+            remove_border[i].classList.add('hidden-icon')
         }
 
         // getting the name of the selected item
@@ -29,7 +29,7 @@ function selected(item, section) {
 
         for (let i = 4; i <= 6; i++) {
             remove_border[i].style.boxShadow = 'none'
-            remove_border[i].classList.add('hiddenIcone')
+            remove_border[i].classList.add('hidden-icon')
         }
 
         // getting the name of the selected item
@@ -45,7 +45,7 @@ function selected(item, section) {
 
         for (let i = 7; i <= 10; i++) {
             remove_border[i].style.boxShadow = 'none'
-            remove_border[i].classList.add('hiddenIcone')
+            remove_border[i].classList.add('hidden-icon')
         }
 
         // getting the name of the selected item
@@ -60,7 +60,7 @@ function selected(item, section) {
 
     // applying the border and applying the icon
     item.style.boxShadow = border;
-    item.classList.remove('hiddenIcone')
+    item.classList.remove('hidden-icon')
 
     if (CloseOrderCheck()) {
         closeOrder()
