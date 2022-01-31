@@ -132,7 +132,8 @@ function infoOrder() {
         dishesPrice[2].innerHTML = ListItemsPrice[2].toString().replace('.',',')
 
         let totalOrderPrice = document.querySelector('.order-total-price')
-        totalOrderPrice.innerHTML += TotalPrice.toString().replace('.',',');
+        let totalString = "R$ " + TotalPrice.toString().replace('.',',');
+        totalOrderPrice.innerHTML = totalString;
     }
 }
 

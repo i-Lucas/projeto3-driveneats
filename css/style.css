@@ -178,8 +178,11 @@ footer {
     font-weight: 400;
     font-size: 22px;
     color: white;
+
     display:flex;
     justify-content:space-between;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .order-confirm button {
@@ -195,21 +198,24 @@ footer {
     justify-content: center;
     align-items: center;
 
-    color: #50D074;
-    
-    background: #FFFFFF;
     border-radius: 100px;
     border: none;
-
-    margin-bottom: 0px;
 }
 
-.hidden {
-    display: none;
+.confirmOrder {
+
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    color: #50D074;
+    background: #FFFFFF;
 }
 
-.hiddenIcone ion-icon {
-    display: none;
+.cancelOrder {
+
+    margin-left: 25px;
+    background: #50D074;
+    color: white;
 }
 
 .background-white {
@@ -229,4 +235,16 @@ footer {
     position: absolute;
     bottom: 9.3%;
     right: 9.3%;
+}
+
+.hidden {
+    display: none;
+}
+
+.hiddenIcone ion-icon {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
 }
