@@ -214,3 +214,11 @@ footer {
 
     background: rgba(255, 255, 255, 0.9);
 }
+
+.check-icon {
+    color: #32B72F;
+    position: absolute;
+    bottom: 9.3%;
+    right: 9.3%;
+}
+

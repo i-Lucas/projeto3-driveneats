@@ -14,6 +14,7 @@ function dishes_selected(item) {
     }
     // aply border
     item.style.boxShadow = border;
+    // item.classList.add('iconx')
 
     // getting the name of the selected item
     let selectedNameItem = item.getElementsByTagName('h2')
@@ -170,6 +171,6 @@ function OrderCheck() {
 
 function cancelOrder() {
     document.querySelector('.background-white').style.display = 'none'
-    document.querySelector(".order-confirm").classList.add("hidden");
+    document.querySelector(".order-confirm").classList.add("hidden")
     document.getElementById('btn').classList.remove('hidden')
 }
