@@ -23,7 +23,6 @@
             <h1>Primeiro, seu prato</h1>
             <div class="scroll-box">
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 0)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="dishes_selected(this)"> -->
                     <img src="img/dishes/pizza.jpg" alt="">
                     <h2 data-identifier="food-title">Pizza de Calabresa</h2>
                     <p>muzzarela, molho e calabresa</p>
@@ -31,7 +30,6 @@
                     <ion-icon  class ='check-icon 'name="checkmark-circle"></ion-icon>
                 </div>
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 0)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="dishes_selected(this)"> -->
                     <img src="img/dishes/burguer.jpg" alt="">
                     <h2 data-identifier="food-title">Big Mac Duplo</h2>
                     <p>salada, queijo, carne e pão</p>
@@ -39,7 +37,6 @@
                     <ion-icon  class ='check-icon 'name="checkmark-circle"></ion-icon>
                 </div>
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 0)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="dishes_selected(this)"> -->
                     <img src="img/dishes/lasanha.jpeg" alt="">
                     <h2 data-identifier="food-title">Lasanha Bolonhesa</h2>
                     <p>molho bolonhesa com queijo suiço</p>
@@ -47,7 +44,6 @@
                     <ion-icon  class ='check-icon 'name="checkmark-circle"></ion-icon>
                 </div>
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 0)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="dishes_selected(this)"> -->
                     <img src="img/dishes/pastel.jpg" alt="">
                     <h2 data-identifier="food-title">Porção com 8 Pastéis</h2>
                     <p>sabores: frango, carne, peixe e queijo</p>
@@ -61,7 +57,6 @@
             <h1>Agora, sua bebida</h1>
             <div class="scroll-box">
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 1)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="drinks_selected(this)"> -->
                     <img src="img/drinks/suco.jpg" alt="">
                     <h2 data-identifier="food-title">Sucos Naturais</h2>
                     <p>morango, laranja ou manga</p>
@@ -70,7 +65,6 @@
 
                 </div>
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 1)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="drinks_selected(this)"> -->
                     <img src="img/drinks/coca.jpg" alt="">
                     <h2 data-identifier="food-title">Coca Cola</h2>
                     <p>Lata 350ml</p>
@@ -79,7 +73,6 @@
 
                 </div>
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 1)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="drinks_selected(this)"> -->
                     <img src="img/drinks/agua.png" alt="">
                     <h2 data-identifier="food-title">Água Mineral</h2>
                     <p>Garrafinha 350ml</p>
@@ -94,7 +87,6 @@
             <h1>Por fim, sua sobremesa</h1>
             <div class="scroll-box">
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 2)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="desserts_selected(this)"> -->
                     <img src="img/desserts/sorvete.webp" alt="">
                     <h2 data-identifier="food-title">Sorvete</h2>
                     <p>chocolate, morango, passas ou creme</p>
@@ -103,7 +95,6 @@
          
                 </div>
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 2)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="desserts_selected(this)"> -->
                     <img src="img/desserts/pudim.jpg" alt="">
                     <h2 data-identifier="food-title">Pudim</h2>
                     <p>delicioso pudim</p>
@@ -112,7 +103,6 @@
           
                 </div>
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 2)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="desserts_selected(this)"> -->
                     <img src="img/desserts/bolo.webp" alt="">
                     <h2 data-identifier="food-title">Fatia de Bolo</h2>
                     <p>fatia de bolo de chocolate</p>
@@ -121,7 +111,6 @@
                  
                 </div>
                 <div data-identifier="food-option" class="options-box hiddenIcone" onclick="selected(this, 2)">
-                <!-- <div data-identifier="food-option" class="options-box hiddenIcone" onclick="desserts_selected(this)"> -->
                     <img src="img/desserts/bolacha.webp" alt="">
                     <h2 data-identifier="food-title">Bolacha de Morango</h2>
                     <p>pacote com 10 unidades</p>
@@ -138,18 +127,10 @@
 
     <div class="order-confirm hidden" data-identifier="confirmation-dialog">
         <h1>Confirme seu pedido</h1>        
-        <div class ='line'>
-            <span class="order-name-0">Pedido1</span> <span class="order-price-0">Preco1</span>
-        </div>
-        <div class ='line'>
-            <span class="order-name-1">Pedido2</span> <span class="order-price-1">Preco2</span>
-        </div>
-        <div class ='line'p>
-            <span class="order-name-2">Pedido3</span> <span class="order-price-2">Preco3</span>
-        </div>
-        <div class ='line'>
-            <span class = "bold">TOTAL</span><span class="order-total-price bold"> R$ </span>
-        </div>
+        <div class ='line'><span class="order-name-0">Pedido1</span> <span class="order-price-0">Preco1</span></div>
+        <div class ='line'><span class="order-name-1">Pedido2</span> <span class="order-price-1">Preco2</span> </div>
+        <div class ='line'p><span class="order-name-2">Pedido3</span> <span class="order-price-2">Preco3</span></div>
+        <div class ='line'><span class = "bold">TOTAL</span><span class="order-total-price bold"> R$ </span></div>
         <button class = "confirmOrder" onclick="confirmData()">Tudo certo, pode pedir!</button>
         <button class = "cancelOrder" onclick="cancelOrder()">Cancelar</button>
     </div>

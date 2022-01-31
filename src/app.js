@@ -3,7 +3,6 @@ let border = '0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 3px #32B7
 let ListItemsNames = []
 let ListItemsPrice = []
 let TotalPrice = 0
-let total = []
 let selectedItems = []
 
 function selected(item, section) {
@@ -16,55 +15,47 @@ function selected(item, section) {
             remove_border[i].style.boxShadow = 'none'
             remove_border[i].classList.add('hiddenIcone')
         }
+
+        // getting the name of the selected item
+        let selectedNameItem = item.getElementsByTagName('h2')
+        ListItemsNames[section] = selectedNameItem[0].innerHTML
+
+        // getting the value of the selected item
+        let selectedPriceItem = item.getElementsByClassName('item-price')
+        ListItemsPrice[section] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
+        selectedItems[section] = true
+
     } else if (section === 1) {
 
         for (let i = 4; i <= 6; i++) {
             remove_border[i].style.boxShadow = 'none'
             remove_border[i].classList.add('hiddenIcone')
         }
+
+        // getting the name of the selected item
+        let selectedNameItem = item.getElementsByTagName('h2')
+        ListItemsNames[section] = selectedNameItem[0].innerHTML
+
+        // getting the value of the selected item
+        let selectedPriceItem = item.getElementsByClassName('item-price')
+        ListItemsPrice[section] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
+        selectedItems[section] = true
+
     } else if (section === 2) {
 
         for (let i = 7; i <= 10; i++) {
             remove_border[i].style.boxShadow = 'none'
             remove_border[i].classList.add('hiddenIcone')
         }
-    }
-
-    if (section === 0) {
 
         // getting the name of the selected item
         let selectedNameItem = item.getElementsByTagName('h2')
-        ListItemsNames[0] = selectedNameItem[0].innerHTML
+        ListItemsNames[section] = selectedNameItem[0].innerHTML
 
         // getting the value of the selected item
         let selectedPriceItem = item.getElementsByClassName('item-price')
-        ListItemsPrice[0] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
-
-        selectedItems[0] = true
-    }
-    else if (section === 1) {
-
-        // getting the name of the selected item
-        let selectedNameItem = item.getElementsByTagName('h2')
-        ListItemsNames[1] = selectedNameItem[0].innerHTML
-
-        // getting the value of the selected item
-        let selectedPriceItem = item.getElementsByClassName('item-price')
-        ListItemsPrice[1] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
-
-        selectedItems[1] = true
-    }
-    else if (section === 2) {
-
-        // getting the name of the selected item
-        let selectedNameItem = item.getElementsByTagName('h2')
-        ListItemsNames[2] = selectedNameItem[0].innerHTML
-
-        // getting the value of the selected item
-        let selectedPriceItem = item.getElementsByClassName('item-price')
-        ListItemsPrice[2] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
-
-        selectedItems[2] = true
+        ListItemsPrice[section] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
+        selectedItems[section] = true
     }
 
     // applying the border and applying the icon
