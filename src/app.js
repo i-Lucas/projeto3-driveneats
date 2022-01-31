@@ -6,101 +6,79 @@ let TotalPrice = 0
 let total = []
 let selectedItems = []
 
-function dishes_selected(item) {
+function selected(item, section) {
 
     let remove_border = document.getElementsByClassName('options-box')
-    for (let i = 0; i <= 3; i++) {
-        remove_border[i].style.boxShadow = 'none'
-        remove_border[i].classList.add('hiddenIcone')
-    }
-    // aply border
-    item.style.boxShadow = border;
-    item.classList.remove('hiddenIcone')
-    
-    // let icon = document.getElementsByClassName('check-icon')
-    // item.classList.remove('hidden')
 
-    // getting the name of the selected item
-    let selectedNameItem = item.getElementsByTagName('h2')
-    ListItemsNames[0] = selectedNameItem[0].innerHTML
+    if (section === 0) {
 
-    // getting the value of the selected item
-    let selectedPriceItem = item.getElementsByClassName('item-price')
-    ListItemsPrice[0] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
+        for (let i = 0; i <= 3; i++) {
+            remove_border[i].style.boxShadow = 'none'
+            remove_border[i].classList.add('hiddenIcone')
+        }
+    } else if (section === 1) {
 
-    selectedItems[0] = true
+        for (let i = 4; i <= 6; i++) {
+            remove_border[i].style.boxShadow = 'none'
+            remove_border[i].classList.add('hiddenIcone')
+        }
+    } else if (section === 2) {
 
-    if (ListItemsNames[0] != undefined && ListItemsNames[1] != undefined && ListItemsNames[2] != undefined) {
-        closeOrder()
-    }
-}
-
-function drinks_selected(item) {
-
-    let remove_border = document.getElementsByClassName('options-box')
-    for (let i = 4; i <= 6; i++) {
-        remove_border[i].style.boxShadow = 'none'
-        remove_border[i].classList.add('hiddenIcone')
+        for (let i = 7; i <= 10; i++) {
+            remove_border[i].style.boxShadow = 'none'
+            remove_border[i].classList.add('hiddenIcone')
+        }
     }
 
-    // aply border
-    item.style.boxShadow = border;
-    item.classList.remove('hiddenIcone')
+    if (section === 0) {
 
-    // getting the name of the selected item
-    let selectedNameItem = item.getElementsByTagName('h2')
-    ListItemsNames[1] = selectedNameItem[0].innerHTML
+        // getting the name of the selected item
+        let selectedNameItem = item.getElementsByTagName('h2')
+        ListItemsNames[0] = selectedNameItem[0].innerHTML
 
-    // getting the value of the selected item
-    let selectedPriceItem = item.getElementsByClassName('item-price')
-    ListItemsPrice[1] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
+        // getting the value of the selected item
+        let selectedPriceItem = item.getElementsByClassName('item-price')
+        ListItemsPrice[0] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
 
-    selectedItems[1] = true
-
-    if (ListItemsNames[0] != undefined && ListItemsNames[1] != undefined && ListItemsNames[2] != undefined) {
-        closeOrder()
+        selectedItems[0] = true
     }
-}
+    else if (section === 1) {
 
-function desserts_selected(item) {
+        // getting the name of the selected item
+        let selectedNameItem = item.getElementsByTagName('h2')
+        ListItemsNames[1] = selectedNameItem[0].innerHTML
 
-    let remove_border = document.getElementsByClassName('options-box')
-    for (let i = 7; i <= 10; i++) {
-        remove_border[i].style.boxShadow = 'none'
-        remove_border[i].classList.add('hiddenIcone')
+        // getting the value of the selected item
+        let selectedPriceItem = item.getElementsByClassName('item-price')
+        ListItemsPrice[1] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
+
+        selectedItems[1] = true
+    }
+    else if (section === 2) {
+
+        // getting the name of the selected item
+        let selectedNameItem = item.getElementsByTagName('h2')
+        ListItemsNames[2] = selectedNameItem[0].innerHTML
+
+        // getting the value of the selected item
+        let selectedPriceItem = item.getElementsByClassName('item-price')
+        ListItemsPrice[2] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
+
+        selectedItems[2] = true
     }
 
-    // aply border
+    // applying the border and applying the icon
     item.style.boxShadow = border;
     item.classList.remove('hiddenIcone')
 
-    // getting the name of the selected item
-    let selectedNameItem = item.getElementsByTagName('h2')
-    ListItemsNames[2] = selectedNameItem[0].innerHTML
-
-    // getting the value of the selected item
-    let selectedPriceItem = item.getElementsByClassName('item-price')
-    ListItemsPrice[2] = Number(selectedPriceItem[0].innerHTML.replace(',', '.'))
-
-    selectedItems[2] = true
-
-    if (ListItemsNames[0] != undefined && ListItemsNames[1] != undefined && ListItemsNames[2] != undefined) {
+    if (CloseOrderCheck()) {
         closeOrder()
     }
-}
-
-function closeOrder() {
-
-    let button = document.querySelector('#btn')
-    button.style.backgroundColor = '#32B72F';
-    button.innerHTML = 'Fechar pedido'
-
-    TotalPrice = (ListItemsPrice[0] + ListItemsPrice[1] + ListItemsPrice[2]).toFixed(2)
 }
 
 function infoOrder() {
 
-    if (OrderCheck()) {
+    if (checkOptions()) {
 
         // background-white
         document.querySelector('.background-white').style.display = 'flex'
@@ -119,30 +97,39 @@ function infoOrder() {
         dishesName[0] = document.querySelector('.order-name-0')
         dishesName[0].innerHTML = ListItemsNames[0]
         dishesPrice[0] = document.querySelector('.order-price-0')
-        dishesPrice[0].innerHTML = ListItemsPrice[0].toString().replace('.',',')
+        dishesPrice[0].innerHTML = ListItemsPrice[0].toString().replace('.', ',')
 
         dishesName[1] = document.querySelector('.order-name-1')
         dishesName[1].innerHTML = ListItemsNames[1]
         dishesPrice[1] = document.querySelector('.order-price-1')
-        dishesPrice[1].innerHTML = ListItemsPrice[1].toString().replace('.',',')
+        dishesPrice[1].innerHTML = ListItemsPrice[1].toString().replace('.', ',')
 
         dishesName[2] = document.querySelector('.order-name-2')
         dishesName[2].innerHTML = ListItemsNames[2]
         dishesPrice[2] = document.querySelector('.order-price-2')
-        dishesPrice[2].innerHTML = ListItemsPrice[2].toString().replace('.',',')
+        dishesPrice[2].innerHTML = ListItemsPrice[2].toString().replace('.', ',')
 
         let totalOrderPrice = document.querySelector('.order-total-price')
-        let totalString = "R$ " + TotalPrice.toString().replace('.',',');
+        let totalString = "R$ " + TotalPrice.toString().replace('.', ',');
         totalOrderPrice.innerHTML = totalString;
     }
 }
 
 function confirmData() {
-    
+
     let userName = prompt('Por favor, informe-nos seu nome:')
     let userAddress = prompt('Para finalizarmos, informe seu endereço: ')
     let userInfo = [userName, userAddress]
     sendOrder(userInfo)
+}
+
+function closeOrder() {
+
+    let button = document.querySelector('#btn')
+    button.style.backgroundColor = '#32B72F';
+    button.innerHTML = 'Fechar pedido'
+
+    TotalPrice = (ListItemsPrice[0] + ListItemsPrice[1] + ListItemsPrice[2]).toFixed(2)
 }
 
 // by Hiann
@@ -153,7 +140,6 @@ function sendOrder(userInfo) {
         + '\n - Bebida: ' + ListItemsNames[1]
         + '\n - Sobremesa: ' + ListItemsNames[2]
         + '\n - Total: R$: ' + TotalPrice
-
         + '\n\n Nome: ' + userInfo[0]
         + '\n Endereço: ' + userInfo[1];
 
@@ -162,7 +148,7 @@ function sendOrder(userInfo) {
     window.open(url, '_blank')
 }
 
-function OrderCheck() {
+function checkOptions() {
 
     if (ListItemsNames[0] == undefined && ListItemsNames[1] == undefined && ListItemsNames[2] == undefined) {
         return alert("Você deve escolher seu pedido primeiramente !")
@@ -177,6 +163,13 @@ function OrderCheck() {
         return alert("Você deve escolher sua sobremesa !")
     }
     else return true
+}
+
+function CloseOrderCheck() {
+    if (ListItemsNames[0] != undefined && ListItemsNames[1] != undefined && ListItemsNames[2] != undefined) {
+        return true
+    }
+    else return false
 }
 
 function cancelOrder() {
