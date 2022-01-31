@@ -11,10 +11,14 @@ function dishes_selected(item) {
     let remove_border = document.getElementsByClassName('options-box')
     for (let i = 0; i <= 3; i++) {
         remove_border[i].style.boxShadow = 'none'
+        remove_border[i].classList.add('hiddenIcone')
     }
     // aply border
     item.style.boxShadow = border;
-    // item.classList.add('iconx')
+    item.classList.remove('hiddenIcone')
+    
+    // let icon = document.getElementsByClassName('check-icon')
+    // item.classList.remove('hidden')
 
     // getting the name of the selected item
     let selectedNameItem = item.getElementsByTagName('h2')
@@ -36,10 +40,12 @@ function drinks_selected(item) {
     let remove_border = document.getElementsByClassName('options-box')
     for (let i = 4; i <= 6; i++) {
         remove_border[i].style.boxShadow = 'none'
+        remove_border[i].classList.add('hiddenIcone')
     }
 
     // aply border
     item.style.boxShadow = border;
+    item.classList.remove('hiddenIcone')
 
     // getting the name of the selected item
     let selectedNameItem = item.getElementsByTagName('h2')
@@ -61,10 +67,12 @@ function desserts_selected(item) {
     let remove_border = document.getElementsByClassName('options-box')
     for (let i = 7; i <= 10; i++) {
         remove_border[i].style.boxShadow = 'none'
+        remove_border[i].classList.add('hiddenIcone')
     }
 
     // aply border
     item.style.boxShadow = border;
+    item.classList.remove('hiddenIcone')
 
     // getting the name of the selected item
     let selectedNameItem = item.getElementsByTagName('h2')
@@ -111,20 +119,20 @@ function infoOrder() {
         dishesName[0] = document.querySelector('.order-name-0')
         dishesName[0].innerHTML = ListItemsNames[0]
         dishesPrice[0] = document.querySelector('.order-price-0')
-        dishesPrice[0].innerHTML = ListItemsPrice[0]
+        dishesPrice[0].innerHTML = ListItemsPrice[0].toString().replace('.',',')
 
         dishesName[1] = document.querySelector('.order-name-1')
         dishesName[1].innerHTML = ListItemsNames[1]
         dishesPrice[1] = document.querySelector('.order-price-1')
-        dishesPrice[1].innerHTML = ListItemsPrice[1]
+        dishesPrice[1].innerHTML = ListItemsPrice[1].toString().replace('.',',')
 
         dishesName[2] = document.querySelector('.order-name-2')
         dishesName[2].innerHTML = ListItemsNames[2]
         dishesPrice[2] = document.querySelector('.order-price-2')
-        dishesPrice[2].innerHTML = ListItemsPrice[2]
+        dishesPrice[2].innerHTML = ListItemsPrice[2].toString().replace('.',',')
 
         let totalOrderPrice = document.querySelector('.order-total-price')
-        totalOrderPrice.innerHTML = TotalPrice;
+        totalOrderPrice.innerHTML += TotalPrice.toString().replace('.',',');
     }
 }
 
@@ -136,6 +144,7 @@ function confirmData() {
     sendOrder(userInfo)
 }
 
+// by Hiann
 function sendOrder(userInfo) {
 
     const message = 'Olá, gostaria de fazer o pedido:'
