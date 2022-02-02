@@ -24,39 +24,39 @@
 
   <!-- comidas daoras -->
   <main>
-    <section class="prato">
+    <section class="prato" data-identifier="dishes">
       <h1>Primeiro, seu prato</h1>
       <div class="container-produtos">
         <!-- produto 1-->
-        <div class="produto" onclick="selecionarPrato(this, 'Big Mac', 14.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarPrato(this, 'Big Mac', 14.90)">
           <img src="img/pratos/burguer.jpg" alt="Hamburguer">
-          <p><strong class="descricao">Big Mac</strong></p>
+          <p><strong data-identifier="food-title">Big Mac</strong></p>
           <p><small>Carne, salada, queijo e bacon</small></p>
-          <p class="preco">R$ 14,90</p>
+          <p data-identifier="food-price">R$ 14,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
         <!-- produto 2-->
-        <div class="produto" onclick="selecionarPrato(this, 'Lasanha Bolonhesa', 15.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarPrato(this, 'Lasanha', 15.90)">
           <img src="img/pratos/lasanha.jpeg" alt="Lasanha Bolonhesa">
-          <p><strong>Lasanha Bolonhesa</strong></p>
+          <p><strong data-identifier="food-title" >Lasanha Bolonhesa</strong></p>
           <p><small>Lasanha Bolonhesa</small></p>
-          <p>R$ 15,90</p>
+          <p data-identifier="food-price">R$ 15,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
         <!-- produto 3-->
-        <div class="produto" onclick="selecionarPrato(this, 'Pastéis', 16.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarPrato(this, 'Pastéis', 16.90)">
           <img src="img/pratos/pastel.jpg" alt="Pastéis">
           <p><strong>Pastéis</strong></p>
-          <p><small>Porção com 5 pastéis</small></p>
-          <p>R$ 16,90</p>
+          <p><small data-identifier="food-title" >Porção com 5 pastéis</small></p>
+          <p data-identifier="food-price">R$ 16,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
         <!-- produto 4 -->
-        <div class="produto" onclick="selecionarPrato(this, 'Pizza Calabresa', 17.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarPrato(this, 'Pizza Calabresa', 17.90)">
           <img src="img/pratos/pizza.jpg" alt="Pizza Calabresa">
-          <p><strong>Pizza Calabresa</strong></p>
+          <p><strong data-identifier="food-title" >Pizza Calabresa</strong></p>
           <p><small>Mussarela e calabresa</small></p>
-          <p>R$ 17,90</p>
+          <p data-identifier="food-price">R$ 17,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
       </div>
@@ -64,77 +64,77 @@
 
     </section>
 
-    <section class="bebida">
+    <section class="bebida" data-identifier="drinks">
       <h1>Agora, sua bebida</h1>
       <div class="container-produtos">
         <!-- bebiba 1 -->
-        <div class="produto" onclick="selecionarBebida(this,'Coca Cola', 4.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarBebida(this,'Coca Cola', 4.90)">
           <img src="img/bebidas/coca.jpg" alt="Coca Cola">
-          <p><strong>Coca Cola</strong></p>
+          <p><strong data-identifier="food-title" >Coca Cola</strong></p>
           <p><small>Lata 350 ml</small></p>
-          <p>R$ 4,90</p>
+          <p data-identifier="food-price">R$ 4,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
         <!-- bebiba 2 -->
-        <div class="produto" onclick="selecionarBebida(this,'Àgua Mineral', 5.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarBebida(this,'Àgua Mineral', 5.90)">
           <img src="img/bebidas/agua.png" alt="Àgua Mineral">
-          <p><strong>Àgua Mineral</strong></p>
+          <p><strong data-identifier="food-title" >Àgua Mineral</strong></p>
           <p><small>Garrafa 350 ml</small></p>
-          <p>R$ 5,90</p>
+          <p data-identifier="food-price">R$ 5,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
         <!-- bebiba 3 -->
-        <div class="produto" onclick="selecionarBebida(this,'Sucos Naturais', 6.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarBebida(this,'Sucos Naturais', 6.90)">
           <img src="img/bebidas/suco.jpg" alt="Sucos Naturais">
-          <p><strong>Sucos Naturais</strong></p>
+          <p><strong data-identifier="food-title" >Sucos Naturais</strong></p>
           <p><small>Morango, Laranja ou Limão</small></p>
-          <p>R$ 6,90</p>
+          <p data-identifier="food-price">R$ 6,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
         <!-- bebiba 4 -->
-        <!-- <div class="produto" onclick="selecionarBebida(this,'Refri 4', 7.90)">
+        <!-- <div class="produto" data-identifier="food-option" onclick="selecionarBebida(this,'Refri 4', 7.90)">
           <img src="img/coca.png" alt="Coca geladinha">
           <p><strong>Refri 4</strong></p>
           <p><small>Lata 350ml</small></p>
-          <p>R$ 7,90</p>
+          <p data-identifier="food-price">R$ 7,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div> -->
       </div>
     </section>
 
-    <section class="sobremesa">
+    <section class="sobremesa" data-identifier="desserts">
       <h1>Por fim, sua sobremesa</h1>
       <div class="container-produtos">
         <!-- sobremesa 1 -->
-        <div class="produto" onclick="selecionarSobremesa(this, 'Pudim', 7.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarSobremesa(this, 'Pudim', 7.90)">
           <img src="img/sobremesas/pudim.jpg" alt="Pudim de leite">
-          <p><strong>Pudim de Leite</strong></p>
+          <p><strong data-identifier="food-title" >Pudim de Leite</strong></p>
           <p><small>Apenas pudim</small></p>
-          <p>R$ 7,90</p>
+          <p data-identifier="food-price">R$ 7,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
         <!-- sobremesa 2 -->
-        <div class="produto" onclick="selecionarSobremesa(this, 'Sorvete', 8.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarSobremesa(this, 'Sorvete', 8.90)">
           <img src="img/sobremesas/sorvete.webp" alt="Sorvete">
-          <p><strong>Sorvete</strong></p>
+          <p><strong data-identifier="food-title" >Sorvete</strong></p>
           <p><small>Creme, napolitano ou chocolate</small></p>
-          <p>R$ 8,90</p>
+          <p data-identifier="food-price">R$ 8,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
         <!-- sobremesa 3 -->
-        <div class="produto" onclick="selecionarSobremesa(this, 'Bolachas', 9.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarSobremesa(this, 'Bolachas', 9.90)">
           <img src="img/sobremesas/bolacha.webp" alt="Bolachas">
-          <p><strong>Bolachas</strong></p>
+          <p><strong data-identifier="food-title" >Bolachas</strong></p>
           <p><small>Bolachas Gourmet</small></p>
-          <p>R$ 9,90</p>
+          <p data-identifier="food-price">R$ 9,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
         <!-- sobremesa 4 -->
-        <div class="produto" onclick="selecionarSobremesa(this, 'Bolo', 10.90)">
+        <div class="produto" data-identifier="food-option" onclick="selecionarSobremesa(this, 'Bolo', 10.90)">
           <img src="img/sobremesas/bolo.webp" alt="Bolo de Chocolate">
-          <p><strong>Bolo de Chocolate</strong></p>
+          <p><strong data-identifier="food-title" >Bolo de Chocolate</strong></p>
           <p><small>Bolo de Chocolate</small></p>
-          <p>R$ 10,90</p>
+          <p data-identifier="food-price">R$ 10,90</p>
           <ion-icon class="check" name="checkmark-circle"></ion-icon>
         </div>
       </div>
@@ -143,9 +143,9 @@
   </main>
 
   <!-- confirmação -->
-  <aside class="confirmacao escondido">
+  <aside class="confirmacao escondido" data-identifier="confirmation-dialog">
     <div class="confirmacao-detalhes">
-      <h1>Confirme seu pedido</h1>
+      <h1 class = "bold">Confirme seu pedido</h1>
       <ul>
         <li>
           <div class="pratoEscolhido">nenhum</div>
@@ -160,10 +160,10 @@
           <div class="sobremesaEscolhidaPreco">R$ 0.0</div>
         </li>
         <li>
-          <div class="total">TOTAL</div>
-          <div class="totalPreco"></div>
+          <div class="total bold">TOTAL</div>
+          <div class="totalPreco bold"></div>
         </li>
-        <button onclick="fecharPedido()">Tudo certo! Pode pedir!</button>
+        <button onclick="fecharPedido()">Tudo certo, Pode pedir!</button>
         <p class="cancelar" onclick="refazerPedido()">Cancelar</p>
       </ul>
     </div>

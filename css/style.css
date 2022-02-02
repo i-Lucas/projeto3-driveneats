@@ -3,224 +3,237 @@
 
 /* geral */
 * {
-    box-sizing: border-box;
-    
-    /* cores tema */
-    --vermelho: #CF2B2B;
-    --cinza-claro: #E5E5E5;
-    --cinza-escuro: #CBCBCB;
-    --branco: #FFF;
-    --preto: #333;
-    --verde-escuro: #32B72F;
-    --verde-claro: #50D074;
-  }
-  
-  body {
-     /* font-family: 'Righteous', cursive; */
-    font-family: 'Roboto', sans-serif;
-    background-color: #E5E5E5;
-  }
-  
-  /* -- header -- */
-  header {
-    background: #CF2B2B;
-    color: white;
-    font-weight: 400;
-    position: fixed;
-    width: 100%; /* right: 0 */
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  
-  header * {
-    margin-left: 18px;
-  }
-  
-  header h1 {
-    font-family: 'Righteous', cursive;
-    font-size: 44px;
-    padding-top: 8px;
-  }
-  
-  header h4 {
-    font-size: 18px;
-    padding-bottom: 8px;
-  }
-  
-  /* -- produtos -- */
-  main {
-    margin: 100px 0;
-  }
-  
-  section {
-    margin-bottom: 27px;
-  }
-  
-  .container-produtos {
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: auto;
-    margin-top: 17px;
-  }
-  
-  section h1 {
-    font-family: 'Righteous', cursive;
-    font-size: 26px;
-    margin-left: 16px;
-  }
-  
-  .produto {
-    width: 172px;
-    height: 216px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    color: black;
-    font-size: 16px;
-    border-radius: 9px;
-    box-shadow: 0px 0px 10px -4px #00000040;
-    margin-top: 17px;
-    margin-left: 16px;
-    margin-bottom: 20px;
-    padding: 14px;
-    position: relative;
-  }
-  
-  .produto * {
-    margin-bottom: 5px;
-  }
-  
-  .produto img {
-    width: 144px;
-    height: 87px;
-    border-radius: 4px;
-  }
-  
-  .produto strong {
-    font-weight: 700;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .produto small {
-    font-weight: 300;
-    font-size: 15px;
-    color: #A6A6A6;
-  }
-  
-  .produto p {
-    font-weight: 400;
-    font-size: 16px;
-    color: #000;
-  }
-  
-  .produto .check {
-    position: absolute;
-    right: 12px;
-    bottom: 10px;
-    font-size: 19px;
-    color: #32B72F;
-    display: none;
-  }
-  
-  .produto.selecionado .check {
-    display: block;
-  }
-  
-  .selecionado {
-    border: 4px solid #32B72F;
-  }
-  
-  /* -- confirmacao pedido -- */
-  .confirmacao {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 19px;
-    font-size: 22px;
-  }
-  
-  .confirmacao-detalhes {
-    background-color: var(--verde-claro);
-    color: var(--branco);
-    width: 377px;
-    height: 353px;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    border-radius: 9px;
-  }
-  
-  .confirmacao-detalhes * {
-    margin: 5px 26px;
-  }
-  
-  .confirmacao-detalhes li {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .confirmacao-detalhes button {
-    border-radius: 100px;
-    padding: 5px 10px;
-    color: var(--verde-claro);
-    font-weight: 700;
-    width: 333px;
-    height: 50px;
-    font-size: 22px;
-    border: none;
-  }
-  
-  .confirmacao-detalhes button:hover {
-    cursor: pointer;
-  }
-  
-  .confirmacao .cancelar {
-    text-align: center;
-  }
-  
-  /* -- footer -- */
-  footer {
-    width: 100%;
-    height: 92px;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-  }
-  
-  footer button {
-    font-size: 20px;
-    font-weight: 400;
-    background-color: #CBCBCB;
-    color: #fff;
-    text-align: center;
-    border-radius: 50px;
-    border: none;
-    width: 364px;
-    height: 61px;
-  }
-  
-  .liberado {
-    background-color: #32B72F;
-    font-weight: 700;
-  }
-  
-  .escondido {
-    display: none;
-  }
+  box-sizing: border-box;
+
+  /* cores tema */
+  --vermelho: #CF2B2B;
+  --cinza-claro: #E5E5E5;
+  --cinza-escuro: #CBCBCB;
+  --branco: #FFF;
+  --preto: #333;
+  --verde-escuro: #32B72F;
+  --verde-claro: #50D074;
+}
+
+body {
+  /* font-family: 'Righteous', cursive; */
+  font-family: 'Roboto', sans-serif;
+  background-color: #E5E5E5;
+}
+
+/* -- header -- */
+header {
+  background: #CF2B2B;
+  color: white;
+  font-weight: 400;
+  position: fixed;
+  width: 100%;
+  /* right: 0 */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header * {
+  margin-left: 18px;
+}
+
+header h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 44px;
+  padding-top: 8px;
+}
+
+header h4 {
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+
+/* -- produtos -- */
+main {
+  margin: 100px 0;
+}
+
+section {
+  margin-bottom: 27px;
+}
+
+.container-produtos {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin-top: 17px;
+}
+
+section h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 26px;
+  margin-left: 16px;
+}
+
+.produto {
+  width: 172px;
+  height: 216px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: black;
+  font-size: 16px;
+  border-radius: 9px;
+  box-shadow: 0px 0px 10px -4px #00000040;
+  margin-top: 17px;
+  margin-left: 16px;
+  margin-bottom: 20px;
+  padding: 14px;
+  position: relative;
+}
+
+.produto * {
+  margin-bottom: 5px;
+}
+
+.produto img {
+  width: 144px;
+  height: 87px;
+  border-radius: 4px;
+}
+
+.produto strong {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+}
+
+.produto small {
+  font-weight: 300;
+  font-size: 15px;
+  color: #A6A6A6;
+}
+
+.produto p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+
+.produto .check {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  font-size: 19px;
+  color: #32B72F;
+  display: none;
+}
+
+.produto.selecionado .check {
+  display: block;
+}
+
+.selecionado {
+  border: 4px solid #32B72F;
+}
+
+/* -- confirmacao pedido -- */
+.confirmacao {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 19px;
+  font-size: 22px;
+}
+
+.confirmacao-detalhes {
+  background-color: var(--verde-claro);
+  color: var(--branco);
+  width: 377px;
+  height: 353px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 9px;
+}
+
+.confirmacao-detalhes * {
+  margin: 5px 26px;
+}
+
+.confirmacao-detalhes li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmacao-detalhes button {
+  border-radius: 100px;
+  padding: 5px 10px;
+  color: var(--verde-claro);
+  font-weight: 700;
+  width: 333px;
+  height: 50px;
+  font-size: 22px;
+  border: none;
+}
+
+.confirmacao-detalhes button:hover {
+  cursor: pointer;
+}
+
+.confirmacao .cancelar {
+  text-align: center;
+}
+
+/* -- footer -- */
+footer {
+  width: 100%;
+  height: 92px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer button {
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #CBCBCB;
+  color: #fff;
+  text-align: center;
+  border-radius: 50px;
+  border: none;
+  width: 364px;
+  height: 61px;
+}
+
+.liberado {
+  background-color: #32B72F;
+  font-weight: 700;
+}
+
+.escondido {
+  display: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.cancelar:hover {
+  cursor: pointer;
+}
+
+.produto:hover {
+  cursor: pointer;
+}

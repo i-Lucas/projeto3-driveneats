@@ -9,7 +9,7 @@ let contadorProdutos = 0;
 
 function selecionarPrato(div, descricao, preco) {
   desmarcarProduto('prato');
-  
+
   // marca
   div.classList.add("selecionado");
   prato = descricao;
@@ -21,7 +21,7 @@ function selecionarPrato(div, descricao, preco) {
 
 function selecionarBebida(div, descricao, preco) {
   desmarcarProduto('bebida');
-  
+
   // marca
   div.classList.add("selecionado");
   bebida = descricao;
@@ -45,10 +45,11 @@ function selecionarSobremesa(div, descricao, preco) {
 
 function liberarFechamento() {
   const botao = document.querySelector("footer button");
-  if(contadorProdutos === 3) {
+  if (contadorProdutos === 3) {
     botao.disabled = false;
     botao.innerHTML = "Fechar pedido";
     botao.classList.add("liberado");
+    botao.style.cursor = "pointer";
   } else {
     botao.disabled = true;
     botao.innerHTML = "Selecione os 3 itens para fechar o pedido";
@@ -58,7 +59,7 @@ function liberarFechamento() {
 
 function desmarcarProduto(produto) {
   const produtoSelecionado = document.querySelector(`.${produto} .selecionado`); // "."+bebida+" .selecionado"
-  if(produtoSelecionado !== null) {
+  if (produtoSelecionado !== null) {
     produtoSelecionado.classList.remove("selecionado");
     contadorProdutos = contadorProdutos - 1;
   }
@@ -69,16 +70,15 @@ function fecharPedido() {
   window.open(linkDaMensagem, '_blank').focus();
 }
 
-
 function revisarPedido() {
   document.querySelector(".confirmacao").classList.remove("escondido");
 
   document.querySelector(".pratoEscolhido").innerHTML = prato;
-  document.querySelector(".pratoEscolhidoPreco").innerHTML = `R$ ${pratoPreco.toFixed(2)}`;
+  document.querySelector(".pratoEscolhidoPreco").innerHTML = `${pratoPreco.toFixed(2)}`;
   document.querySelector(".bebidaEscolhida").innerHTML = bebida;
-  document.querySelector(".bebidaEscolhidaPreco").innerHTML = `R$ ${bebidaPreco.toFixed(2)}`;
+  document.querySelector(".bebidaEscolhidaPreco").innerHTML = `${bebidaPreco.toFixed(2)}`;
   document.querySelector(".sobremesaEscolhida").innerHTML = sobremesa;
-  document.querySelector(".sobremesaEscolhidaPreco").innerHTML = `R$ ${sobremesaPreco.toFixed(2)}`
+  document.querySelector(".sobremesaEscolhidaPreco").innerHTML = `${sobremesaPreco.toFixed(2)}`
 
   document.querySelector(".totalPreco").innerHTML = `R$ ${(pratoPreco + bebidaPreco + sobremesaPreco).toFixed(2)}`
 }
