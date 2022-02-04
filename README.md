@@ -1,6 +1,6 @@
 # projeto3-driveneats
 
-this project is part of the full stack development course of the Driven training
+this project is part of the full-stack development course of the Driven training
 
 requirements:
 
